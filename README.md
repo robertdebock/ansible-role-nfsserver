@@ -19,7 +19,7 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
   roles:
     - role: robertdebock.nfsserver
       nfsserver_exports:
-        - share: /home
+        - share: /mnt/export
           hosts:
             - name: 10.0.0.0/24
               options:
@@ -59,6 +59,8 @@ For verification `molecule/resources/verify.yml` runs after the role has been ap
       register: nfsserver_check_exports
       failed_when:
         - "'/home' not in nfsserver_check_exports.stdout"
+      when:
+        - ansible_connection != "docker"
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
