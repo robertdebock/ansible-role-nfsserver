@@ -5,5 +5,8 @@
   gather_facts: yes
 
   tasks:
-    - name: check if connection still works
-      ping:
+    - name: check exports
+      command: showmounts --exports
+      register: nfsserver_check_exports
+      failed_when:
+        - "'/home' not in nfsserver_check_exports.stdout"
