@@ -12,7 +12,10 @@
             - name: 10.0.0.0/24
               options:
                 - ro
-                - sync
-                - no_wdelay
                 - no_subtree_check
                 - nohide
+            - name: 172.16.0.0/24
+              options:
+                - rw
+                - sync
+                - no_wdelay
