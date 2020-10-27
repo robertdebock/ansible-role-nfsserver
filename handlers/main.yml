@@ -2,4 +2,4 @@
 # handlers file for nfsserver
 
 - name: reload exports
-  command: exportfs -a
+  command: exportfs -ra
