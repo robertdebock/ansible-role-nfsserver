@@ -1,0 +1,18 @@
+---
+- name: converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-nfsserver
+      nfsserver_exports:
+        - share: /home/nfsshare
+          hosts:
+            - name: 10.0.0.0/24
+              options:
+                - ro
+                - sync
+                - no_wdelay
+                - no_subtree_check
+                - nohide

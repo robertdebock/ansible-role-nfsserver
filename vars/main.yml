@@ -1,0 +1,6 @@
+---
+# vars file for nfsserver
+
+nfsserver_services:
+  - rpcbind
+  - nfs-server

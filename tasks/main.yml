@@ -1,0 +1,24 @@
+---
+# tasks file for nfsserver
+
+- name: include assert.yml
+  include_tasks: assert.yml
+  run_once: yes
+
+- name: install pacakges
+  package:
+    name: nfs-utils
+
+- name: configure exports
+  template:
+    src: exports.j2
+    dest: /etc/exports
+  notify:
+    - restart nfs server
+
+- name: start nfs server
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  loop: "{{ nfsserver_services }}"
