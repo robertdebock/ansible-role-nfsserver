@@ -23,3 +23,5 @@
     state: started
     enabled: yes
   loop: "{{ nfsserver_services }}"
+  when:
+    - ansible_connection != "docker"

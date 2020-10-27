@@ -10,3 +10,5 @@
       register: nfsserver_check_exports
       failed_when:
         - "'/home' not in nfsserver_check_exports.stdout"
+      when:
+        - ansible_connection != "docker"

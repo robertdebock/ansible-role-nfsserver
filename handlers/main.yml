@@ -3,3 +3,5 @@
 
 - name: reload exports
   command: exportfs -ra
+  when:
+    - ansible_connection != "docker"
