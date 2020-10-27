@@ -1,6 +1,18 @@
 ---
 # vars file for nfsserver
 
-nfsserver_services:
-  - rpcbind
-  - nfs-server
+_nfsserver_packages:
+  RedHat:
+    - nfs-utils
+  Debian:
+    - nfs-kernel-server
+
+nfsserver_packages: "{{ _nfsserver_packages[ansible_os_family] }}"
+
+_nfsserver_services:
+  RedHat:
+    - nfs-server
+  Debian:
+    - nfs-kernel-server
+
+nfsserver_services: "{{ _nfsserver_services[ansible_os_family] }}"
