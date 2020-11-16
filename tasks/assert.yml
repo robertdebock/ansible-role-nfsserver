@@ -12,7 +12,6 @@
   assert:
     that:
       - item.share is defined
-      - item.share | length > 0
       - item.hosts is defined
       - item.hosts is iterable
     quiet: yes
