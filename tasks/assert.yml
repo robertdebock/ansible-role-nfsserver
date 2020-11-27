@@ -12,6 +12,7 @@
   assert:
     that:
       - item.share is defined
+      - item.share is string
       - item.hosts is defined
       - item.hosts is iterable
     quiet: yes
