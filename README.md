@@ -2,9 +2,9 @@
 
 Setup exports on an nfs server
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-nfsserver.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-nfsserver)|[![github](https://github.com/robertdebock/ansible-role-nfsserver/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-nfsserver/actions)|[![quality](https://img.shields.io/ansible/quality/51495)](https://galaxy.ansible.com/robertdebock/nfsserver)|[![downloads](https://img.shields.io/ansible/role/d/51495)](https://galaxy.ansible.com/robertdebock/nfsserver)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-nfsserver.svg)](https://github.com/robertdebock/ansible-role-nfsserver/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-nfsserver.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-nfsserver)|[![github](https://github.com/robertdebock/ansible-role-nfsserver/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-nfsserver/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-nfsserver/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-nfsserver)|[![quality](https://img.shields.io/ansible/quality/51495)](https://galaxy.ansible.com/robertdebock/nfsserver)|[![downloads](https://img.shields.io/ansible/role/d/51495)](https://galaxy.ansible.com/robertdebock/nfsserver)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-nfsserver.svg)](https://github.com/robertdebock/ansible-role-nfsserver/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
