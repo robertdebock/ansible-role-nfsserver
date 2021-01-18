@@ -47,6 +47,23 @@ The machine needs to be prepared in CI this is done using `molecule/resources/pr
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
+## [Role Variables](#role-variables)
+
+These variables are set in `defaults/main.yml`:
+```yaml
+---
+# defaults file for nfsserver
+
+# You can define a list of exports:
+# nfsserver_exports:
+#   - share: /mnt/export
+#     hosts:
+#       - name: 10.0.0.0/24
+#         options:
+#           - ro
+#           - no_subtree_check
+#           - nohide
+```
 
 ## [Requirements](#requirements)
 
