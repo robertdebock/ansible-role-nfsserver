@@ -1,13 +1,13 @@
 ---
 
 - name: test if export.hosts is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - export.hosts is defined
       - export.hosts is iterable
 
 - name: test if item in export.hosts is set correctly
-  include: assert_host.yml
+  ansible.builtin.include: assert_host.yml
   loop: "{{ export.hosts }}"
   loop_control:
     label: "{{ host.name }}"
