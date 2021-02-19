@@ -7,11 +7,11 @@
   delegate_to: localhost
 
 - name: install pacakges
-  package:
+  ansible.builtin.package:
     name: "{{ nfsserver_packages }}"
 
 - name: configure exports
-  template:
+  ansible.builtin.template:
     src: exports.j2
     dest: /etc/exports
     mode: "0644"
@@ -19,7 +19,7 @@
     - reload exports
 
 - name: start nfs server
-  service:
+  ansible.builtin.service:
     name: "{{ item }}"
     state: started
     enabled: yes

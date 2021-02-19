@@ -1,7 +1,7 @@
 ---
 
 - name: test if nfsserver_exports is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - nfsserver_exports is iterable
     quiet: yes
@@ -9,7 +9,7 @@
     - nfsserver_exports is defined
 
 - name: test if item in nfsserver_exports is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - item.share is defined
       - item.share is string
@@ -23,7 +23,7 @@
     - nfsserver_exports is defined
 
 - name: test if item in nfsserver_exports.hosts is set correctly
-  include: assert_export.yml
+  ansible.builtin.include: assert_export.yml
   loop: "{{ nfsserver_exports }}"
   loop_control:
     label: "{{ export.share }}"
