@@ -6,7 +6,8 @@
 
   tasks:
     - name: check exports
-      command: showmounts --exports
+      ansible.builtin.command:
+        cmd: showmounts --exports
       register: nfsserver_check_exports
       failed_when:
         - "'/home' not in nfsserver_check_exports.stdout"
