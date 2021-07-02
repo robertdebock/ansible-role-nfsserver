@@ -8,8 +8,9 @@ _nfsserver_packages:
     - nfs-utils
   Debian:
     - nfs-kernel-server
-  RedHat:
+  RedHat: &RHEL
     - nfs-utils
+  Rocky: *RHEL
   Suse:
     - nfs-kernel-server
 
@@ -22,8 +23,9 @@ _nfsserver_services:
     - nfs-server
   Debian:
     - nfs-kernel-server
-  RedHat:
+  RedHat: &RHEL
     - nfs-server
+  Rocky: *RHEL
   Suse:
     - nfsserver
 
