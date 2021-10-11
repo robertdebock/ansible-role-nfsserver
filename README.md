@@ -63,6 +63,7 @@ The default values for the variables are set in `defaults/main.yml`:
 #           - ro
 #           - no_subtree_check
 #           - nohide
+nfsserver_exports: []
 ```
 
 ## [Requirements](#requirements)
