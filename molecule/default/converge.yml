@@ -19,3 +19,8 @@
                 - rw
                 - sync
                 - no_wdelay
+        - share: /mnt/export2
+          hosts:
+            - name: 10.2.3.0/24
+              options:
+                - ro
