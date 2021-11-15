@@ -31,6 +31,11 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
                 - rw
                 - sync
                 - no_wdelay
+        - share: /mnt/export2
+          hosts:
+            - name: 10.2.3.0/24
+              options:
+                - ro
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
