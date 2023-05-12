@@ -5,7 +5,7 @@
   gather_facts: yes
 
   tasks:
-    - name: check exports
+    - name: Check exports
       ansible.builtin.command:
         cmd: showmount --exports
       register: nfsserver_check_exports
