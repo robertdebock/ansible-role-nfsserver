@@ -13,6 +13,7 @@
     that:
       - item.share is defined
       - item.share is string
+      - item.share is not none
       - item.hosts is defined
       - item.hosts is iterable
     quiet: yes
