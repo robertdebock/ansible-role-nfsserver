@@ -17,7 +17,7 @@
     owner: "{{ item.owner }}"
     group: "{{ item.group }}"
     mode: "{{ item.mode }}"
-  loop: "{{ nfsserver_exports.share }}"
+  loop: "{{ nfsserver_exports }}"
   loop_control:
     label: "{{ item.share }}"
 
