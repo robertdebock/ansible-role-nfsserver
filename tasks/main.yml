@@ -14,7 +14,7 @@
 
 - name: Create all exported directories
   ansible.builtin.file:
-    path: "{{ item }}"
+    path: "{{ item.share }}"
     state: directory
     owner: "{{ item.owner }}"
     group: "{{ item.group }}"
