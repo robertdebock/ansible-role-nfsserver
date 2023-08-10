@@ -13,3 +13,5 @@
     name: "{{ item }}"
     state: restarted
   loop: "{{ nfsserver_services }}"
+  when:
+    - ansible_connection not in [ "container", "docker", "community.docker.docker" ]
