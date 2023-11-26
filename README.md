@@ -1,4 +1,4 @@
-# Ansible role [nfsserver](#nfsserver)
+# [Ansible role nfsserver](#nfsserver)
 
 Setup exports on an nfs server
 
