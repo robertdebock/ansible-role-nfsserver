@@ -81,6 +81,9 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 #           - no_subtree_check
 #           - nohide
 nfsserver_exports: []
+
+# You can write the exports in a specific file.
+nfsserver_exports_file: /etc/exports
 ```
 
 ## [Requirements](#requirements)
